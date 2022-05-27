@@ -1,0 +1,130 @@
+*{
+    /* aqui zeramos as configurações do css no navegador  */
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    /* peguei essas cores no projeto do figma */
+    --black:#0D114F;
+    --white:#FAFAFA;
+    --lightblue:#E0ECFF;
+    --blue:#3485FF;
+    --red:#E83F5B;
+    --Background:#FBFCFF;
+    --Iconsdetails:#A5B0C1;
+    --Overlay:#040911;
+    --linear:#5498FF;
+    --grey-blue:#A1B2CD;
+    --grey-dark:#4d5e77;
+    --grey-light:#e5eaf1;
+
+
+    /* tamanhoda fonte em rem, por causa da responsividade ele se adapta aos tamanhos diferentes, 1rem = 16px que é igual a 100% */
+    font-size: 62.5%;
+}
+
+h2{
+    /* karai faz o da tamanho fonte x10 tamanho 28 é igual a 2.8 rem é mais facil usar REM */
+    font-size: 2.8rem;
+}
+
+body{
+    /* view height tamanho 100% da tela */
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    /* usando variavel no css legal né !! */
+    background: var(--Background);
+
+}
+
+body, button, input, textarea {
+    /* intervalo de tamanho, ajuda em tamanmhos de telas, responsividade  */
+    font-size: clamp(14px, 1.6rem, 2vw);
+    /* está font eu localizei no google fonts  */
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.sr-only{
+    /* legal copiei este codigo lá no site da taiwind (saber pesquinas no google é essencial */
+    
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* input */
+input, button, .button{
+    border-radius: .8rem;
+    height: 5rem;
+
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: var(--blue);
+    color: var(--white);
+
+    cursor: pointer;
+    transition: filter .99s;
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2);
+
+
+}
+
+button > img
+.button > img{
+    margin-right: 1rem ;
+    width: 2rem ;
+
+}
+
+button.outlined,
+.button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+
+}
+
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
+}
+
+
+/* senha desta aula #together */
+
